@@ -1,0 +1,93 @@
+.Button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+
+  line-height: 1.1;
+
+  &:disabled {
+    opacity: 0.6;
+    pointer-events: none;
+  }
+}
+
+.ButtonLittle {
+  padding: 6px 12px;
+  min-height: 40px;
+
+  font-size: 18px;
+}
+
+.ButtonMedium {
+  padding: 10px 20px;
+  min-height: 55px;
+
+  font-size: 20px;
+}
+
+.ButtonBefore {
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.ButtonAfter {
+  &:not(:first-child) {
+    margin-left: 10px;
+  }
+}
+
+// Colors
+
+.ButtonOrange {
+  background-color: var(--orange-300);
+
+  color: var(--white);
+
+  @media (any-hover: hover) {
+    transition: background-color 0.2s ease 0s;
+
+    &:hover {
+      background-color: var(--orange-200);
+    }
+
+    &:active {
+      transition: background-color 0.1s ease 0s;
+      background-color: var(--orange-500);
+    }
+  }
+}
+
+.ButtonOrangeOutline {
+  border: 1px solid var(--orange-300);
+
+  color: var(--orange-300);
+
+  @media (any-hover: hover) {
+    transition: border-color 0.2s ease 0s, color 0.2s ease 0s;
+
+    &:hover {
+      border-color: var(--orange-200);
+
+      color: var(--orange-200);
+    }
+
+    &:active {
+      transition: border-color 0.1s ease 0s, color 0.1s ease 0s;
+      border-color: var(--orange-500);
+
+      color: var(--orange-500);
+    }
+  }
+}
+
+// `
+//           px-[25px]
+//           min-h-[45px]
+//           inline-flex justify-center items-center
+//           rounded-lg
+//           bg-blue-500
+
+//           text-white
+// 		    `

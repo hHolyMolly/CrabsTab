@@ -1,0 +1,102 @@
+$colorError: #ee3d3d;
+$colorErrorShadow: rgba(238, 61, 61, 0.2);
+
+.TextField {
+  display: flex;
+  flex-direction: column;
+}
+
+.TextFieldLabel {
+  font-size: 18px;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+.TextFieldInput {
+  padding: 10px 25px;
+  width: 100%;
+  min-height: 60px;
+  border-radius: 5px;
+  transition: border-color 0.2s ease 0s, box-shadow 0.2s ease 0s;
+  border: 1px solid var(--grey-200);
+  background-color: var(--white);
+
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.1;
+  text-align: left;
+  color: var(--black);
+
+  &::placeholder {
+    color: var(--grey-500);
+  }
+
+  &:focus {
+    box-shadow: 0 0 6px rgba(177, 177, 177, 0.2);
+    border-color: var(--grey-300);
+  }
+}
+
+.TextFieldInputBefore {
+  padding-left: 55px;
+}
+
+.TextFieldInputAfter {
+  padding-right: 55px;
+}
+
+.TextFieldBefore,
+.TextFieldAfter {
+  width: 60px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  overflow: hidden;
+}
+
+.TextFieldBefore {
+  left: 0;
+}
+
+.TextFieldAfter {
+  right: 0;
+}
+
+.TextFieldInputError {
+  box-shadow: 0 0 6px $colorErrorShadow;
+  border-color: $colorError;
+
+  &:focus {
+    box-shadow: 0 0 6px $colorErrorShadow;
+    border-color: $colorError;
+  }
+}
+
+.TextFieldError {
+  display: inline-block;
+  animation: show-error 0.6s ease;
+
+  color: $colorError;
+  font-size: 13px;
+  line-height: 1.1;
+
+  &:not(:first-child) {
+    margin-top: 6px;
+  }
+}
+
+@keyframes show-error {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

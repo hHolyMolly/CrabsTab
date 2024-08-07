@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "module": "commonjs",
+    "target": "es5",
+    "jsx": "react-jsx",
+    "allowJs": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "baseUrl": "./src/",
+    "paths": {
+      "@assets/*": ["assets/*"],
+      "@assets": ["assets"],
+      "@components/*": ["components/*"],
+      "@components": ["components"],
+      "@configs/*": ["configs/*"],
+      "@configs": ["configs"],
+      "@hooks/*": ["hooks/*"],
+      "@hooks": ["hooks"],
+      "@interfaces/*": ["interfaces/*"],
+      "@interfaces": ["interfaces"],
+      "@pages/*": ["pages/*"],
+      "@pages": ["pages"],
+      "@services/*": ["services/*"],
+      "@services": ["services"],
+      "@store/*": ["store/*"],
+      "@store": ["store"],
+      "@styles/*": ["styles/*"],
+      "@styles": ["styles"],
+      "@utils/*": ["utils/*"],
+      "@utils": ["utils"]
+    }
+  },
+  "include": ["src", "declaration.d.ts"]
+}
